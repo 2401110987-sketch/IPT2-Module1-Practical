@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	const studentForm = document.getElementById('studentForm');
 	const tableContent = document.getElementById('table-content');
 
+	if (!studentForm || !tableContent) {
+		return;
+	}
+
 	studentForm.addEventListener('submit', function (event) {
 		event.preventDefault();
 		addStudent();
